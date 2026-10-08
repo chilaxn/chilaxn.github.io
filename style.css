@@ -22,7 +22,11 @@ html {
 body {
     margin: 0;
     background:
-        radial-gradient(circle at 50% -10%, rgba(124, 58, 237, 0.25), transparent 35%),
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(124, 58, 237, 0.25),
+            transparent 35%
+        ),
         var(--bg);
     color: var(--text);
     font-family:
@@ -69,7 +73,11 @@ main {
     font-size: 30px;
     font-weight: 900;
     background:
-        linear-gradient(135deg, var(--accent), var(--accent-2));
+        linear-gradient(
+            135deg,
+            var(--accent),
+            var(--accent-2)
+        );
     box-shadow:
         0 12px 40px rgba(139, 92, 246, 0.35);
 }
@@ -92,7 +100,10 @@ main {
     max-width: 850px;
     margin: 0;
     font-size: clamp(3rem, 8vw, 6rem);
-    line-height: 0.98;
+
+    /* FIX: prevents the "g" from being clipped */
+    line-height: 1.05;
+
     letter-spacing: -0.05em;
     font-weight: 900;
 }
@@ -100,7 +111,11 @@ main {
 .hero h1 span {
     display: block;
     background:
-        linear-gradient(90deg, #a78bfa, #e879f9);
+        linear-gradient(
+            90deg,
+            #a78bfa,
+            #e879f9
+        );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -141,7 +156,11 @@ main {
 .btn-primary {
     color: white;
     background:
-        linear-gradient(135deg, var(--accent), var(--accent-2));
+        linear-gradient(
+            135deg,
+            var(--accent),
+            var(--accent-2)
+        );
     box-shadow:
         0 15px 40px rgba(139, 92, 246, 0.3);
 }
@@ -264,7 +283,9 @@ section h2 {
     color: #c4b5fd !important;
     font-size: 0.75rem !important;
     font-weight: 800;
-    letter-spacing: 0.15em;
+
+    /* FIX: keeps CHILAXN together naturally */
+    letter-spacing: normal;
 }
 
 .muted {
